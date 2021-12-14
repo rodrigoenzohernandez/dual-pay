@@ -5,13 +5,13 @@
  * @returns {int} Returns quantity of nominals that you will have on Balanz
  */
 
-function usdToNominals(amount){
+function usdToNominals(amount) {
 
     const facebankTransferCost = 30;
-    const balanzComision = 0.4;
+    const balanzCommission = 0.4;
     const bondBuyPrice = 35.65; //TO DO: api call
-    const percentageLessComision = 100 - balanzComision
-    const nominals = Math.round(((amount - facebankTransferCost) / bondBuyPrice) * percentageLessComision);
+    const percentageLessCommission = 100 - balanzCommission
+    const nominals = Math.round(((amount - facebankTransferCost) / bondBuyPrice) * percentageLessCommission);
     return nominals
 
 }
