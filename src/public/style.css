@@ -1,3 +1,63 @@
-body{
-    background-color: red;
+body {
+    font-family: 'Raleway', sans-serif;
+}
+.img-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.style-img img {
+    width: 100px;
+}
+h3 {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    margin-bottom: 20px;
+}
+.box-style {
+    border: rgb(147, 174, 201) solid 2px;
+    width: 300px;
+    height: 200px;
+    border-radius: 0px 10px;
+}
+.box-style input {
+    width: 85px;
+    height: 20px;
+}
+.style-input {
+    margin-top: 23px;
+}
+.style-radio {
+    width: 15px !important;
+    height: 13px !important;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+.style-button {
+    padding: 18px 37px;
+    border-radius: 0px 10px;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    background-color: rgb(60, 116, 207);
+    border: rgb(89, 93, 97);
+    color: seashell;
+}
+.color1 {
+    color: rgb(60, 116, 207);
+}
+.color2 {
+    color: rgb(147, 174, 201);
+}
+.color3 {
+    color: rgb(89, 93, 97);
 }
