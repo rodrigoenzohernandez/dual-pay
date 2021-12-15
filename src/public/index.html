@@ -5,15 +5,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
     <title>dual-pay</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>dual-pay</h1>
+    <section class="img-container">
+        <div class="style-img">
+            <img src="../imgs/bank.png.lnk" alt="">
+        </div>
+        <div class="style-img">
+            <img src="../imgs/balanz.png.lnk" alt="">
+        </div>
+        <div class="style-img">
+            <img src="../imgs/bank.png.lnk" alt="">
+        </div>
+    </section>
+    <section class="container">
+        <div class="box-style">
+            <h1>FACEBANK</h1>
+            <h3>Enter the amount of nominals to calculate</h3>
+            <input type="text">
+        </div>
+        <div class="box-style">
+            <h1>BALANZ</h1>
+            <h3>Select whether to operate with USD or Pesos</h3>
+            <input class="style-radio" type="radio" name="currency" id="usd">
+            <label for="usd">USD</label>
+            <input class="style-radio" type="radio" name="currency" id="pesos">
+            <label for="pesos">Pesos</label>
+            <input type="text" disabled>
+        </div>
+        <div class="box-style">
+            <h1>BANCO</h1>
+            <h3>Amount of money to receive</h3>
+            <input class="style-input" type="text" disabled>
+        </div>
+    </section>
+    <section>
+        <div class="button">
+            <button class="style-button" type="button">Calculate</button>
+        </div>
+    </section>
+    <!-- <section>
+        <h1>PALETA DE COLORES</h1>
+        <h2 class="color1">color 1</h2>
+        <h2 class="color2">color 2</h2>
+        <h2 class="color3">color 3</h2>
+
+    </section> -->
     <script src="./app.js"></script>
     <script src="../functions/nominalsToPesosOrUsd.js"></script>
-
 </body>
 
 </html>
