@@ -18,10 +18,10 @@ function nominalsToPesosOrUsd(nominals, currencyToRecive) {
   }
 }
 
-function transform(quote, currency, nominals, commissionTotal) {
+function transform(bondSellPrice, currency, nominals, commissionTotal) {
   let subTotal = 0;
   let commission = 0;
-  subTotal = (nominals * quote) / 100;
+  subTotal = (nominals * bondSellPrice) / 100;
   commission = (subTotal * commissionTotal) / 100;
   let total = (subTotal - commission).toFixed(2);
   return `${currency} ${total}`;
