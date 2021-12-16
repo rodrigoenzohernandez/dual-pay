@@ -32,11 +32,14 @@ h3 {
     height: 20px;
 }
 .style-input {
-    margin-top: 23px;
+    margin-top: 20px;
 }
 .style-radio {
     width: 15px !important;
     height: 13px !important;
+}
+.usdOrPesos {
+    margin: 0px;
 }
 .button {
     display: flex;
