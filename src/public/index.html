@@ -27,21 +27,21 @@
     <section class="container">
         <div class="box-style">
             <h1>FACEBANK</h1>
-            <h3>Enter the amount of nominals to calculate</h3>
+            <h3>Enter the amount to calculate</h3>
             <input id="facebankAmountInput" min="30" type="number">
         </div>
         <div class="box-style">
             <h1>BALANZ</h1>
             <h3>Select whether to operate with USD or Pesos</h3>
-            <input class="style-radio" type="radio" name="currency" id="usdOption">
-            <label for="usd">USD</label>
-            <input class="style-radio" type="radio" name="currency" id="pesosOption">
-            <label for="pesos">Pesos</label>
             <input id="nominalsInput" type="text" disabled>
         </div>
         <div class="box-style">
             <h1>BANCO</h1>
-            <h3>Amount of money to receive</h3>
+            <input class="style-radio" type="radio" name="currency" id="usdOption" disabled>
+            <label for="usd">USD</label>
+            <input class="style-radio" type="radio" name="currency" id="pesosOption" disabled>
+            <label for="pesos">Pesos</label>
+            <h3 class="usdOrPesos"></h3>
             <input id="receivedMoneyInput" class="style-input" type="text" disabled>
         </div>
     </section>
