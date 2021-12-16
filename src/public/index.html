@@ -28,26 +28,26 @@
         <div class="box-style">
             <h1>FACEBANK</h1>
             <h3>Enter the amount of nominals to calculate</h3>
-            <input type="text">
+            <input id="facebankAmountInput" min="30" type="number">
         </div>
         <div class="box-style">
             <h1>BALANZ</h1>
             <h3>Select whether to operate with USD or Pesos</h3>
-            <input class="style-radio" type="radio" name="currency" id="usd">
+            <input class="style-radio" type="radio" name="currency" id="usdOption">
             <label for="usd">USD</label>
-            <input class="style-radio" type="radio" name="currency" id="pesos">
+            <input class="style-radio" type="radio" name="currency" id="pesosOption">
             <label for="pesos">Pesos</label>
-            <input type="text" disabled>
+            <input id="nominalsInput" type="text" disabled>
         </div>
         <div class="box-style">
             <h1>BANCO</h1>
             <h3>Amount of money to receive</h3>
-            <input class="style-input" type="text" disabled>
+            <input id="receivedMoneyInput" class="style-input" type="text" disabled>
         </div>
     </section>
     <section>
         <div class="button">
-            <button class="style-button" type="button">Calculate</button>
+            <button id="btnCalcutate" class="style-button" type="button" disabled>Calculate</button>
         </div>
     </section>
     <!-- <section>
@@ -59,6 +59,7 @@
     </section> -->
     <script src="./app.js"></script>
     <script src="../functions/nominalsToPesosOrUsd.js"></script>
+    <script src="../functions/convertions.js"></script>
 </body>
 
 </html>
