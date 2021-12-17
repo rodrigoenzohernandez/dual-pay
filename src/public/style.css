@@ -1,5 +1,9 @@
+
 body {
+    max-width: 1680px;
     font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 .img-container {
     display: flex;
@@ -7,10 +11,17 @@ body {
     margin-top: 50px;
 }
 .container {
+    min-width: 400px;
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
     text-align: center;
+}
+.img-responsive{
+    display: none;
+}
+.img-responsive-balanz{
+    display: none;
 }
 .style-img img {
     width: 100px;
@@ -32,11 +43,14 @@ h3 {
     height: 20px;
 }
 .style-input {
-    margin-top: 23px;
+    margin-top: 20px;
 }
 .style-radio {
     width: 15px !important;
     height: 13px !important;
+}
+.usdOrPesos {
+    margin: 0px;
 }
 .button {
     display: flex;
@@ -53,12 +67,30 @@ h3 {
     border: rgb(89, 93, 97);
     color: seashell;
 }
-.color1 {
-    color: rgb(60, 116, 207);
-}
-.color2 {
-    color: rgb(147, 174, 201);
-}
-.color3 {
-    color: rgb(89, 93, 97);
+
+ /*Responsive*/
+ @media (max-width: 460px) {
+    .container {
+         display: flex;
+         flex-direction: column;
+         height: auto;
+         width: 100%;
+         left: 0;
+         margin: 0;
+         padding: 0;
+    }
+    .style-img {
+        display: none;
+    }
+    .box-style {
+        margin: 20px 32px;
+    }
+    .img-responsive{
+        height: 20px;
+        display: inline-block;
+    }
+    .img-responsive-balanz{
+        height: 22px;
+        display: inline-block;
+    }
 }

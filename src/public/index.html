@@ -26,22 +26,22 @@
     </section>
     <section class="container">
         <div class="box-style">
-            <h1>FACEBANK</h1>
-            <h3>Enter the amount of nominals to calculate</h3>
+            <h1>FACEBANK <span> <img class="img-responsive" src="imgs/bank.png"></span></h1>
+            <h3>Enter the amount to calculate</h3>
             <input id="facebankAmountInput" min="30" type="number">
         </div>
         <div class="box-style">
-            <h1>BALANZ</h1>
-            <h3>Select whether to operate with USD or Pesos</h3>
-            <input class="style-radio" type="radio" name="currency" id="usdOption">
-            <label for="usd">USD</label>
-            <input class="style-radio" type="radio" name="currency" id="pesosOption">
-            <label for="pesos">Pesos</label>
+            <h1>BALANZ <span> <img class="img-responsive-balanz" src="imgs/balanz.png"></span> </h1>
+            <h3>Nominals</h3>
             <input id="nominalsInput" type="text" disabled>
         </div>
         <div class="box-style">
-            <h1>BANCO</h1>
-            <h3>Amount of money to receive</h3>
+            <h1>BANCO <span> <img class="img-responsive" src="imgs/bank.png"></span> </h1>
+            <input class="style-radio" type="radio" name="currency" id="usdOption" disabled>
+            <label for="usd">USD</label>
+            <input class="style-radio" type="radio" name="currency" id="pesosOption" disabled>
+            <label for="pesos">Pesos</label>
+            <h3 class="usdOrPesos"></h3>
             <input id="receivedMoneyInput" class="style-input" type="text" disabled>
         </div>
     </section>
@@ -50,13 +50,6 @@
             <button id="btnCalcutate" class="style-button" type="button" disabled>Calculate</button>
         </div>
     </section>
-    <!-- <section>
-        <h1>PALETA DE COLORES</h1>
-        <h2 class="color1">color 1</h2>
-        <h2 class="color2">color 2</h2>
-        <h2 class="color3">color 3</h2>
-
-    </section> -->
     <script src="./app.js"></script>
     <script src="../functions/nominalsToPesosOrUsd.js"></script>
     <script src="../functions/convertions.js"></script>
