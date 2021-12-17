@@ -10,16 +10,22 @@ const btnCalculate = document.querySelector('#btnCalcutate');
 facebankInput.addEventListener('blur', () => {
     const facebankAmount = facebankInput.value
     const validityState = facebankInput.validity;
+    btnCalculate.disabled = true
+    btnCalculate.style = "background-color rgb(89, 93, 97)";
+    usdOption.checked = false
+    pesosOption.checked = false
 
-    if (validityState.rangeUnderflow) {
+    if (validityState.rangeUnderflow || !facebankInput.value) {
         facebankInput.setCustomValidity('The amount must be over 30')
         facebankInput.reportValidity()
         facebankInput.value = ""
     }
     else {
+        // calculate nominals and show amount 
         nominalsInput.value = usdToNominals(facebankAmount)
         usdOption.disabled = false
         pesosOption.disabled = false
+        receivedMoneyInput.value = ""
     }
 })
 
@@ -36,17 +42,17 @@ btnCalculate.addEventListener('click', () => {
 })
 
 usdOption.addEventListener('click', () => {
-    const h3 = document.querySelector(".usdOrPesos");
-    h3.innerText = "Amount of money to recive in Usd"
-    btnCalculate.disabled = false
-    btnCalculate.style = 'background-color: rgb(60, 116, 207)'
-
+    changeOption("Amount of money to recive in USD")
 })
 
 pesosOption.addEventListener('click', () => {
+    changeOption("Amount of money to recive in Pesos")
+})
+
+function changeOption(text) {
     const h3 = document.querySelector(".usdOrPesos");
-    h3.innerText = "Amount of money to recive in Pesos"
+    h3.innerText = text
     btnCalculate.disabled = false
     btnCalculate.style = 'background-color: rgb(60, 116, 207)'
-
-})
+    receivedMoneyInput.value = ""
+}
