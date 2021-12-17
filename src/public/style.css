@@ -1,6 +1,9 @@
+
 body {
     max-width: 1680px;
     font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 .img-container {
     display: flex;
@@ -13,6 +16,12 @@ body {
     display: flex;
     justify-content: space-around;
     text-align: center;
+}
+.img-responsive{
+    display: none;
+}
+.img-responsive-balanz{
+    display: none;
 }
 .style-img img {
     width: 100px;
@@ -64,6 +73,11 @@ h3 {
     .container {
          display: flex;
          flex-direction: column;
+         height: auto;
+         width: 100%;
+         left: 0;
+         margin: 0;
+         padding: 0;
     }
     .style-img {
         display: none;
@@ -71,6 +85,12 @@ h3 {
     .box-style {
         margin: 20px 32px;
     }
-    
- 
+    .img-responsive{
+        height: 20px;
+        display: inline-block;
+    }
+    .img-responsive-balanz{
+        height: 22px;
+        display: inline-block;
+    }
 }
