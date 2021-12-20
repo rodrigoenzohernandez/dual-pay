@@ -7,7 +7,7 @@ const pesosOption = document.querySelector('#pesosOption');
 
 const btnCalculate = document.querySelector('#btnCalcutate');
 
-facebankInput.addEventListener('blur', () => {
+facebankInput.addEventListener('blur', async () => {
     const facebankAmount = facebankInput.value
     const validityState = facebankInput.validity;
     btnCalculate.disabled = true
@@ -22,7 +22,7 @@ facebankInput.addEventListener('blur', () => {
     }
     else {
         // calculate nominals and show amount 
-        nominalsInput.value = usdToNominals(facebankAmount)
+        nominalsInput.value = await usdToNominals(facebankAmount)
         usdOption.disabled = false
         pesosOption.disabled = false
         receivedMoneyInput.value = ""
