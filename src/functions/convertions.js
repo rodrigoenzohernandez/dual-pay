@@ -11,6 +11,7 @@ async function usdToNominals(amount) {
     const balanzCommission = 0.4;
     
     try {
+        //axios get
         const instance = axios.create({
             baseURL: 'http://localhost:3000',
             timeout: 5000,
@@ -19,6 +20,8 @@ async function usdToNominals(amount) {
         const config = { params: {name: 'GD30C'}}
         const response = await instance.get('/bonds', config);
         const bondBuyPrice = response.data.value
+
+        //algorithm logic
         const percentageLessCommission = 100 - balanzCommission
         const nominals = Math.round(((amount - facebankTransferCost) / bondBuyPrice) * percentageLessCommission);
 
