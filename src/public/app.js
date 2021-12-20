@@ -35,8 +35,8 @@ btnCalculate.addEventListener('click', async () => {
 
     if (usdOption.checked || pesosOption.checked) {
         let currencyToRecive;
-        if (usdOption.checked) currencyToRecive = "usd"
-        else currencyToRecive = "pesos"
+        if (usdOption.checked) currencyToRecive = "u$s"
+        else currencyToRecive = "$"
         receivedMoneyInput.value = await nominalsToPesosOrUsd(nominalsInput.value, currencyToRecive)
     }
 })
