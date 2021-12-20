@@ -4,17 +4,56 @@
  * @returns {Float} return the amount converted in pesos or usd
  */
 
-function nominalsToPesosOrUsd(nominals, currencyToRecive) {
+async function nominalsToPesosOrUsd(nominals, currencyToRecive) {
   const balanzCommission = 0.4;
   const marketRight = 0.01;
   const commissionTotal = balanzCommission + marketRight;
 
   if (currencyToRecive === "usd") {
-    const bondSellPriceUsd = 37.6; // TO DO: api call
-    return transform(bondSellPriceUsd, "u$s", nominals, commissionTotal);
-  } else if (currencyToRecive === "pesos") {
-    const bondSellPricePesos = 7270; // TO DO: api call
-    return transform(bondSellPricePesos, "$", nominals, commissionTotal);
+
+    try {
+
+      //axios get
+      const instance = axios.create({
+        baseURL: 'http://localhost:3000',
+        timeout: 5000,
+      });
+
+      const config = { params: {name: 'GD30D'}}
+      const response = await instance.get('/bonds', config);
+      const bondSellPriceUsd = response.data.value
+
+      //algorithm logic
+      return transform(bondSellPriceUsd, "u$s", nominals, commissionTotal);
+
+    } catch (error) {
+      console.error(error);
+      return null
+    }
+
+  } else if (currencyToRecive === "pesos") {  
+
+    try {
+
+      //axios get
+      const instance = axios.create({
+        baseURL: 'http://localhost:3000',
+        timeout: 5000,
+      });
+
+      const config = { params: {name: 'GD30'}}
+      const response = await instance.get('/bonds', config);
+      const bondSellPricePesos = response.data.value
+
+      //algorithm logic
+      return transform(bondSellPricePesos, "$", nominals, commissionTotal);
+
+    } catch (error) {
+      console.error(error);
+      return null
+    }
+
+
   }
 }
 
