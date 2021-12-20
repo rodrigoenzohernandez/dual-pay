@@ -29,7 +29,7 @@ facebankInput.addEventListener('blur', async () => {
     }
 })
 
-btnCalculate.addEventListener('click', () => {
+btnCalculate.addEventListener('click', async () => {
 
     btnCalculate.style = 'border: rgb(147, 174, 201) solid 2px; background-color: rgb(6, 40, 95);'
 
@@ -37,7 +37,7 @@ btnCalculate.addEventListener('click', () => {
         let currencyToRecive;
         if (usdOption.checked) currencyToRecive = "usd"
         else currencyToRecive = "pesos"
-        receivedMoneyInput.value = nominalsToPesosOrUsd(nominalsInput.value, currencyToRecive)
+        receivedMoneyInput.value = await nominalsToPesosOrUsd(nominalsInput.value, currencyToRecive)
     }
 })
 
