@@ -9,27 +9,15 @@ async function usdToNominals(amount) {
 
     const facebankTransferCost = 30;
     const balanzCommission = 0.4;
-    
-    try {
-        //axios get
-        const instance = axios.create({
-            baseURL: 'http://localhost:3000',
-            timeout: 5000,
-          });
-        
-        const config = { params: {name: 'GD30C'}}
-        const response = await instance.get('/bonds', config);
-        const bondBuyPrice = response.data.value
+    const config = { params: {name: 'GD30C'}}
+    const {DUAL_PAY_API_BASE_URL} = configVariables()
+    const response = await GET(DUAL_PAY_API_BASE_URL, '/bonds', config)
 
-        //algorithm logic
+    if(response){
+        const bondBuyPrice = response.data.value
         const percentageLessCommission = 100 - balanzCommission
         const nominals = Math.round(((amount - facebankTransferCost) / bondBuyPrice) * percentageLessCommission);
-
         return nominals
-
-      } catch (error) {
-        console.error(error);
-        return null
-      }
+    }
 
 }
