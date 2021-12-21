@@ -83,10 +83,6 @@ h3 {
     font-weight: 600;
     font-size: 13px;
 }
-.github-img {
-    width: 18px;
-    
-}
  /*Responsive*/
  @media (max-width: 460px) {
     .container {
