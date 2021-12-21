@@ -67,7 +67,22 @@ h3 {
     border: rgb(89, 93, 97);
     color: seashell;
 }
-
+.dp-footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(122, 151, 180);
+}
+.footer-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.github {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 13px;
+}
  /*Responsive*/
  @media (max-width: 460px) {
     .container {
@@ -92,5 +107,10 @@ h3 {
     .img-responsive-balanz{
         height: 22px;
         display: inline-block;
+    }
+    .dp-footer {
+        display: block;
+        text-align: center;
+        background-color: rgb(122, 151, 180);
     }
 }
