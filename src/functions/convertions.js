@@ -5,13 +5,19 @@
  * @returns {int} Returns quantity of nominals that you will have on Balanz
  */
 
-function usdToNominals(amount) {
+async function usdToNominals(amount) {
 
     const facebankTransferCost = 30;
     const balanzCommission = 0.4;
-    const bondBuyPrice = 35.65; //TO DO: api call
-    const percentageLessCommission = 100 - balanzCommission
-    const nominals = Math.round(((amount - facebankTransferCost) / bondBuyPrice) * percentageLessCommission);
-    return nominals
+    const config = { params: {name: 'GD30C'}}
+    const {DUAL_PAY_API_BASE_URL} = configVariables()
+    const response = await GET(DUAL_PAY_API_BASE_URL, '/bonds', config)
+
+    if(response){
+        const bondBuyPrice = response.data.value
+        const percentageLessCommission = 100 - balanzCommission
+        const nominals = Math.round(((amount - facebankTransferCost) / bondBuyPrice) * percentageLessCommission);
+        return nominals
+    }
 
 }
