@@ -7,7 +7,7 @@ const pesosOption = document.querySelector('#pesosOption');
 
 const btnCalculate = document.querySelector('#btnCalcutate');
 
-facebankInput.addEventListener('blur', () => {
+facebankInput.addEventListener('blur', async () => {
     const facebankAmount = facebankInput.value
     const validityState = facebankInput.validity;
     btnCalculate.disabled = true
@@ -22,22 +22,22 @@ facebankInput.addEventListener('blur', () => {
     }
     else {
         // calculate nominals and show amount 
-        nominalsInput.value = usdToNominals(facebankAmount)
+        nominalsInput.value = await usdToNominals(facebankAmount)
         usdOption.disabled = false
         pesosOption.disabled = false
         receivedMoneyInput.value = ""
     }
 })
 
-btnCalculate.addEventListener('click', () => {
+btnCalculate.addEventListener('click', async () => {
 
     btnCalculate.style = 'border: rgb(147, 174, 201) solid 2px; background-color: rgb(6, 40, 95);'
 
     if (usdOption.checked || pesosOption.checked) {
         let currencyToRecive;
-        if (usdOption.checked) currencyToRecive = "usd"
-        else currencyToRecive = "pesos"
-        receivedMoneyInput.value = nominalsToPesosOrUsd(nominalsInput.value, currencyToRecive)
+        if (usdOption.checked) currencyToRecive = "u$s"
+        else currencyToRecive = "$"
+        receivedMoneyInput.value = await nominalsToPesosOrUsd(nominalsInput.value, currencyToRecive)
     }
 })
 
