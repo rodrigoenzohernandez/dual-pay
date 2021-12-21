@@ -66,21 +66,6 @@ h3 {
     border: rgb(89, 93, 97);
     color: seashell;
 }
-.header .logo,
-	header nav {
-		width:100%;
-		text-align:center;
-		line-height:100px;
-        display: flex;
-	}
-
-	.header2 {
-		height:auto;
-	}
-	.header2 .logo,
-	.header2 nav {
-		line-height:50px;
-	}
 
  /*Responsive*/
  @media (max-width: 460px) {
@@ -107,19 +92,4 @@ h3 {
         height: 22px;
         display: inline-block;
     }
-    header .logo,
-	header nav {
-		width:100%;
-		text-align:center;
-		line-height:100px;
-        display: flex;
-	}
-
-	.header2 {
-		height:auto;
-	}
-	.header2 .logo,
-	.header2 nav {
-		line-height:50px;
-	}
 }
