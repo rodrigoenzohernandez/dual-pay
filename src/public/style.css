@@ -69,8 +69,13 @@ h3 {
 }
 .dp-footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: rgb(122, 151, 180);
+}
+.footer-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .github {
     text-decoration: none;
@@ -108,7 +113,7 @@ h3 {
         display: inline-block;
     }
     .dp-footer {
-        
+        display: block;
         text-align: center;
         background-color: rgb(122, 151, 180);
     }
