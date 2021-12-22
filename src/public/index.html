@@ -17,68 +17,68 @@
 </head>
 
 <body>
-<div class="main-container"> 
-    <div class="main">
-    <header>
-        <div class="header-icon">
-            <div class="logo">Dual-Pay</div>
-            <nav>
-                <div class="header-icon">
-                    <a href="#"><i class="fas fa-bars"></i> Inicio</a>
-                    <a href="#"><i class="fa fa-calculator" aria-hidden="true"></i> Calculadora</a>
-                    <a href="#"><i class="fas fa-id-card-alt"></i> Contacto</a>
+    <div class="main-container">
+        <div class="main">
+            <header>
+                <div>
+                    <div class="logo">Dual-Pay</div>
+                    <nav>
+                        <div class="header-icon">
+                            <a href="#"><i class="fas fa-bars"></i> Inicio</a>
+                            <a href="#"><i class="fa fa-calculator" aria-hidden="true"></i> Calculadora</a>
+                            <a href="#"><i class="fas fa-id-card-alt"></i> Contacto</a>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
+            </header>
+            <section class="section-container">
+                <div class="style-img">
+                    <img src="imgs/bank.png" alt="">
+                </div>
+                <div class="style-img">
+                    <img src="imgs/balanz.png" alt="">
+                </div>
+                <div class="style-img">
+                    <img src="imgs/bank.png" alt="">
+                </div>
+            </section>
+            <section class="section-container">
+                <div class="box-style">
+                    <h1>FACEBANK <span> <img class="img-responsive" src="imgs/bank.png"></span></h1>
+                    <h3>Enter the amount to calculate</h3>
+                    <input id="facebankAmountInput" min="30" type="number">
+                </div>
+                <div class="box-style">
+                    <h1>BALANZ <span> <img class="img-responsive-balanz" src="imgs/balanz.png"></span> </h1>
+                    <h3>Nominals</h3>
+                    <input id="nominalsInput" type="text" disabled>
+                </div>
+                <div class="box-style">
+                    <h1>BANCO <span> <img class="img-responsive" src="imgs/bank.png"></span> </h1>
+                    <input class="style-radio" type="radio" name="currency" id="usdOption" disabled>
+                    <label for="usd">USD</label>
+                    <input class="style-radio" type="radio" name="currency" id="pesosOption" disabled>
+                    <label for="pesos">Pesos</label>
+                    <h3 class="usdOrPesos"></h3>
+                    <input id="receivedMoneyInput" class="style-input" type="text" disabled>
+                </div>
+            </section>
+            <section class="section-container">
+                <div class="button">
+                    <button id="btnCalcutate" class="style-button" type="button" disabled>Calculate</button>
+                </div>
+            </section>
         </div>
-    </header>
-    <section class="section-container">
-        <div class="style-img">
-            <img src="imgs/bank.png" alt="">
-        </div>
-        <div class="style-img">
-            <img src="imgs/balanz.png" alt="">
-        </div>
-        <div class="style-img">
-            <img src="imgs/bank.png" alt="">
-        </div>
-    </section>
-    <section class="section-container">
-        <div class="box-style">
-            <h1>FACEBANK <span> <img class="img-responsive" src="imgs/bank.png"></span></h1>
-            <h3>Enter the amount to calculate</h3>
-            <input id="facebankAmountInput" min="30" type="number">
-        </div>
-        <div class="box-style">
-            <h1>BALANZ <span> <img class="img-responsive-balanz" src="imgs/balanz.png"></span> </h1>
-            <h3>Nominals</h3>
-            <input id="nominalsInput" type="text" disabled>
-        </div>
-        <div class="box-style">
-            <h1>BANCO <span> <img class="img-responsive" src="imgs/bank.png"></span> </h1>
-            <input class="style-radio" type="radio" name="currency" id="usdOption" disabled>
-            <label for="usd">USD</label>
-            <input class="style-radio" type="radio" name="currency" id="pesosOption" disabled>
-            <label for="pesos">Pesos</label>
-            <h3 class="usdOrPesos"></h3>
-            <input id="receivedMoneyInput" class="style-input" type="text" disabled>
-        </div>
-    </section>
-    <section class="section-container">
-        <div class="button">
-            <button id="btnCalcutate" class="style-button" type="button" disabled>Calculate</button>
-        </div>
-    </section>
-</div>
-    <footer class="dp-footer">
-        <div class="footer-child">
-            <h5>Made by Majo, Rodri & Pauli</h1>
-        </div>
-        <div class="footer-child">
-            <a class="github" href="https://github.com/rodrigoenzohernandez/dual-pay" target="_blank""><i class=" fa
-                fa-github"></i> Github</a>
-        </div>
-    </footer>
-</div>
+        <footer class="dp-footer">
+            <div class="footer-child">
+                <h5>Made by Majo, Rodri & Pauli</h1>
+            </div>
+            <div class="footer-child">
+                <a class="github" href="https://github.com/rodrigoenzohernandez/dual-pay" target="_blank""><i class=" fa
+                    fa-github"></i> Github</a>
+            </div>
+        </footer>
+    </div>
     <script src="./app.js"></script>
     <script src="../functions/nominalsToPesosOrUsd.js"></script>
     <script src="../functions/convertions.js"></script>

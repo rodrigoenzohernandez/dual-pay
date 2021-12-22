@@ -1,9 +1,7 @@
 .header-icon {
 	display: flex;
-    justify-content: center;
-    align-items: center;
-	padding: 80px 39px;
 	letter-spacing: 1.2px;
+	float: left;
 }
 header {
 	width:100%;
@@ -20,11 +18,11 @@ header .logo {
 	float:left;
     font-family:"Avantgarde", Century "Gothic", "CenturyGothic", "AppleGothic", sans-serif;;
 	letter-spacing: 1.2px;
-	
 }
 header nav {
-	float:right;
 	line-height:200px;
+	float: right;
+	line-height: 200px;
 }
 header nav a {
 	display:inline-block;
