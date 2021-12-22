@@ -2,7 +2,7 @@
 	display: flex;
     justify-content: center;
     align-items: center;
-	padding: 80px 37px;
+	padding: 80px 39px;
 	letter-spacing: 1.2px;
 }
 header {
@@ -10,6 +10,8 @@ header {
 	overflow:hidden;
 	background:rgb(122, 151, 180);
 	margin-bottom:20px;
+	flex-direction: column;
+    align-items: flex-start;
 }
 header .logo {
 	color:#f2f2f2;
