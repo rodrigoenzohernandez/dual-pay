@@ -1,5 +1,5 @@
 body {
-    max-width: 1680px;
+    max-width: 1920px;
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
@@ -62,7 +62,6 @@ h3 {
     font-size: 14px;
     letter-spacing: 1.2px;
     background-color: rgb(89, 93, 97);
-
     border: rgb(89, 93, 97);
     color: seashell;
 }
@@ -84,6 +83,12 @@ h3 {
 }
  /*Responsive*/
  @media (max-width: 460px) {
+
+    .header-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .container {
          display: flex;
          flex-direction: column;
@@ -112,4 +117,5 @@ h3 {
         text-align: center;
         background-color: rgb(122, 151, 180);
     }
+    
 }
