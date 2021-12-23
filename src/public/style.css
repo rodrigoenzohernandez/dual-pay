@@ -93,9 +93,9 @@ h3 {
  @media (max-width: 460px) {
 
     .header-icon {
-        display: flex;
+        display: block;
         justify-content: center;
-        align-items: center;
+        float:left;
     }
     .section-container {
          display: flex;
