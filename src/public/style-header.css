@@ -46,7 +46,7 @@ header nav a:hover {
 		margin-bottom:50px;
     }
     header .logo {
-        padding: 15px 0 0 0;
+        padding: 15px 0 0 16px;
     }
     header nav {
         padding: 0;
