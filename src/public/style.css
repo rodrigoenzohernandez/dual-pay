@@ -10,7 +10,7 @@ body {
 }
 .main {
     overflow: auto;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 .section-container {
     display: flex;
@@ -47,9 +47,9 @@ h3 {
 .style-input {
     margin-top: 20px;
 }
-.style-radio {
-    width: 15px !important;
-    height: 13px !important;
+#style-radio {
+    width: 15px;
+    height: 13px;
 }
 .usdOrPesos {
     margin: 0px;
@@ -82,21 +82,19 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #f2f2f2;
+    letter-spacing: 1.2px
 }
 .github {
     text-decoration: none;
-    color: black;
+    color: #f2f2f2;
     font-weight: 600;
     font-size: 13px;
+    letter-spacing: 1.2px
 }
  /*Responsive*/
  @media (max-width: 460px) {
 
-    .header-icon {
-        display: block;
-        justify-content: center;
-        float:left;
-    }
     .section-container {
          display: flex;
          flex-direction: column;
