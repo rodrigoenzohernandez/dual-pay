@@ -1,34 +1,32 @@
 .header-icon {
 	display: flex;
 	letter-spacing: 1.2px;
-	float: left;
 }
 header {
+	display: flex;
+    align-items: center;
+	justify-content: space-between;
 	width:100%;
+	height: 150px;
 	overflow:hidden;
 	background:rgb(122, 151, 180);
-	margin-bottom:20px;
-	flex-direction: column;
-    align-items: flex-start;
 }
 header .logo {
 	color:#f2f2f2;
 	font-size:50px;
-	line-height:200px;
-	float:left;
-    font-family:"Avantgarde", Century "Gothic", "CenturyGothic", "AppleGothic", sans-serif;;
+	padding: 42px;
 	letter-spacing: 1.2px;
 }
 header nav {
-	line-height:200px;
 	float: right;
-	line-height: 200px;
+	padding: 42px;
 }
 header nav a {
 	display:inline-block;
 	color:#fff;
 	text-decoration:none;
-	padding:10px 20px;
+	text-align: center;
+	padding:10px 16px;
 	line-height:normal;
 	font-size:20px;
 	font-weight:bold;
@@ -41,4 +39,16 @@ header nav a {
 header nav a:hover {
 	background:rgb(89, 93, 97);
 	border-radius:50px;
+}
+@media (max-width: 460px) {
+    header {
+        display: inline-block;
+		margin-bottom:50px;
+    }
+    header .logo {
+        padding: 15px 0 0 16px;
+    }
+    header nav {
+        padding: 0;
+    } 
 }
