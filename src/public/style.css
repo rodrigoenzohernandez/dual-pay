@@ -12,7 +12,7 @@ body {
     overflow: auto;
     padding-bottom: 150px;
 }
-.alert-warning {
+.alertWarning {
     background-color: black;
     color: red;
     justify-content: space-around;
