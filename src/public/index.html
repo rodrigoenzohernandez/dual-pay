@@ -17,21 +17,21 @@
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="main">
-            <header>
-                <div class="logo">Dual-Pay</div>
-                <nav>
-                    <div class="header-icon">
-                        <a href="#"><i class="fas fa-bars"></i> Home</a>
-                        <a href="#"><i class="fa fa-calculator" aria-hidden="true"></i> Calculator</a>
-                        <a href="#"><i class="fas fa-id-card-alt"></i> Contact</a>
-                    </div>
-                </nav>
-            </header>
-            <div onclick="myFunc()" class="alertWarning">
-                <strong>This is an error alert - check it out!</strong><span class="closebtn">X</span>
-            </div>
+    <section class="landing-page">
+        <header>
+            <div class="logo">Dual-Pay</div>
+            <nav>
+                <div class="header-icon">
+                    <a href="#"><i class="fas fa-bars"></i> Home</a>
+                    <a id="btn__Open" href="#"><i class="fa fa-calculator" aria-hidden="true"></i> Calculator</a>
+                    <a href="#"><i class="fas fa-id-card-alt"></i> Contact</a>
+                </div>
+            </nav>
+        </header>
+        <div onclick="myFunc()" class="alertWarning">
+            <strong>This is an error alert - check it out!</strong><span class="closebtn">X</span>
+        </div>
+        <main id="side__home">
             <section class="section-container">
                 <div class="style-img">
                     <img src="imgs/bank.png" alt="">
@@ -54,11 +54,11 @@
                     <h3>Nominals</h3>
                     <input id="nominalsInput" type="text" disabled>
                 </div>
-                <div class="box-style">
+                <div id="radio-container" class="box-style">
                     <h1>BANCO <span> <img class="img-responsive" src="imgs/bank.png"></span> </h1>
-                    <input id="style-radio" type="radio" name="currency" id="usdOption" disabled>
+                    <input class="radio" type="radio" name="currency" id="usdOption" disabled>
                     <label for="usd">USD</label>
-                    <input id="style-radio" type="radio" name="currency" id="pesosOption" disabled>
+                    <input class="radio" type="radio" name="currency" id="pesosOption" disabled>
                     <label for="pesos">Pesos</label>
                     <h3 class="usdOrPesos"></h3>
                     <input id="receivedMoneyInput" class="style-input" type="text" disabled>
@@ -69,17 +69,42 @@
                     <button id="btnCalcutate" class="style-button" type="button" disabled>Calculate</button>
                 </div>
             </section>
+        </main>
+        <main id="main__calculator" style="display: none">
+            <section id="side__calculator">
+                <div class="column-cards">
+                    <div class="box-style">
+                        <h1>NET INCOME <span><i class="fas fa-dollar-sign"></i></span></h1>
+                        <h3>Enter the amount to calculate</h3>
+                        <input id="facebankAmountInput" min="30" type="number">
+                    </div>
+                    <div class="box-style box-style-percentage">
+                        <h1>PERCENTAGE <span> <i class="fas fa-percentage"></i></span></h1>
+                        <h3>Nominals</h3>
+                        <input id="nominalsInput" type="text" disabled>
+                    </div>
+                    <div class="box-style">
+                        <h1>DOLLARS TO RECEIVE <span> <i class="fas fa-hand-holding-usd"></i></span></h1>
+                        <h3>Nominals</h3>
+                        <input id="nominalsInput" type="text" disabled>
+                    </div>
+                    <div class="button">
+                        <button id="btnCalcutate" class="style-button" type="button" disabled>Calculate</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </section>
+    <footer class="dp-footer">
+        <div class="footer-child">
+            <h5>Made by Majo, Rodri & Pauli</h1>
         </div>
-        <footer class="dp-footer">
-            <div class="footer-child">
-                <h5>Made by Majo, Rodri & Pauli</h1>
-            </div>
-            <div class="footer-child">
-                <a class="github" href="https://github.com/rodrigoenzohernandez/dual-pay" target="_blank"><i class=" fa
+        <div class="footer-child">
+            <a class="github" href="https://github.com/rodrigoenzohernandez/dual-pay" target="_blank"><i class=" fa
                     fa-github"></i> Github</a>
-            </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
+    <script src="../functions/toggle.js"></script>
     <script src="./app.js"></script>
     <script src="../functions/nominalsToPesosOrUsd.js"></script>
     <script src="../functions/convertions.js"></script>

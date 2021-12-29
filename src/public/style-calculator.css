@@ -1,0 +1,9 @@
+.full_container {
+    display: flex;
+}
+.home {
+    background-color: cadetblue;
+}
+.calculator {
+    background-color: lightcoral;
+}
