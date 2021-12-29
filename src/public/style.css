@@ -47,7 +47,8 @@ h3 {
 .style-input {
     margin-top: 20px;
 }
-#style-radio {
+
+div#radio-container .radio {
     width: 15px;
     height: 13px;
 }
