@@ -42,7 +42,8 @@ btnCalculate.addEventListener('click', async () => {
         let currencyToRecive;
         if (usdOption.checked) currencyToRecive = "u$s"
         else currencyToRecive = "$"
-        receivedMoneyInput.value = await nominalsToPesosOrUsd(nominalsInput.value, currencyToRecive)
+        const receivedValue = await nominalsToPesosOrUsd(nominalsInput.value, currencyToRecive)
+        if(receivedValue) receivedMoneyInput.value = receivedValue
     }
 })
 
