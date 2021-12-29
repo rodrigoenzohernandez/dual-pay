@@ -113,7 +113,15 @@ div#radio-container .radio {
 }
  /*Responsive*/
  @media (max-width: 460px) {
-
+     header {
+        margin-bottom: 0;
+     }
+    .home_container {
+        display: none;
+    }
+    .calculator_container {
+        border: none;
+    }
     .section-container {
          display: flex;
          flex-direction: column;
