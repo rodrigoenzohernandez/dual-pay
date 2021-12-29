@@ -28,6 +28,11 @@ Return the amount converted in pesos or usd.
 **nominals** Bonds Units.  
 **currencyToRecive** for example usd/pesos
 
+## Architecture
+
+![Architecture](src/public/readme-imgs/dual-pay-architecture.png?raw=true "Architecture")
+
+
 ## Upcoming Improvements 🚀
 1. Calculator to know how many dollars is the percentage of salary that you want to receive.
 2. API to get the bond prices.
