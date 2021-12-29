@@ -25,10 +25,31 @@ body {
     border-right: rgb(6, 40, 95) solid 3px;
     text-align: center;
     transition: 2s;
-    /* transform: translateX(-100%);  */
 }
 .column-cards {
     display: inline-block;
+}
+.alertWarning {
+    display: none;
+    background-color: black;
+    color: red;
+    justify-content: space-around;
+    text-align: center;
+    padding: 25px 45px;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    float: right;
+    font-size: 22px;
+    line-height: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.closebtn:hover {
+    color: black;
 }
 .section-container {
     display: flex;

@@ -21,11 +21,16 @@ facebankInput.addEventListener('blur', async () => {
         facebankInput.value = ""
     }
     else {
-        // calculate nominals and show amount 
-        nominalsInput.value = await usdToNominals(facebankAmount)
-        usdOption.disabled = false
-        pesosOption.disabled = false
-        receivedMoneyInput.value = ""
+        // calculate nominals and show amount
+
+        const nominalsValue = await usdToNominals(facebankAmount)
+
+        if(nominalsValue){
+            nominalsInput.value = nominalsValue
+            usdOption.disabled = false
+            pesosOption.disabled = false
+            receivedMoneyInput.value = ""
+        }
     }
 })
 
@@ -37,7 +42,8 @@ btnCalculate.addEventListener('click', async () => {
         let currencyToRecive;
         if (usdOption.checked) currencyToRecive = "u$s"
         else currencyToRecive = "$"
-        receivedMoneyInput.value = await nominalsToPesosOrUsd(nominalsInput.value, currencyToRecive)
+        const receivedValue = await nominalsToPesosOrUsd(nominalsInput.value, currencyToRecive)
+        if(receivedValue) receivedMoneyInput.value = receivedValue
     }
 })
 

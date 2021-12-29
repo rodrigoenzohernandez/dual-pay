@@ -18,7 +18,14 @@ async function GET(baseUrl, resource, config) {
 
     return response;
   } catch (error) {
-    console.error(error);
+
+    const errorFiled = document.querySelector("#alertWarning");
+    const strongWarning = document.querySelector("#strongWarning");
+
+    errorFiled.style = "display: block";
+
+    strongWarning.innerText = error;
+
     return null;
   }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -18,17 +18,20 @@
 
 <body>
     <section class="landing-page">
-            <header>
-                <div class="logo">Dual-Pay</div>
-                <nav>
-                    <div class="header-icon">
-                        <a href="#"><i class="fas fa-bars"></i> Home</a>
-                        <a id="btn__Open" href="#"><i class="fa fa-calculator" aria-hidden="true"></i> Calculator</a>
-                        <a href="#"><i class="fas fa-id-card-alt"></i> Contact</a>
-                    </div>
-                </nav>
-            </header>
-            <main id="side__home">
+        <header>
+            <div class="logo">Dual-Pay</div>
+            <nav>
+                <div class="header-icon">
+                    <a href="#"><i class="fas fa-bars"></i> Home</a>
+                    <a id="btn__Open" href="#"><i class="fa fa-calculator" aria-hidden="true"></i> Calculator</a>
+                    <a href="#"><i class="fas fa-id-card-alt"></i> Contact</a>
+                </div>
+            </nav>
+        </header>
+        <div id="alertWarning" onclick="myFunc()" class="alertWarning">
+            <strong id="strongWarning">This is an error alert - check it out!</strong><span id="btnClose" class="closebtn">X</span>
+        </div>
+        <main id="side__home">
             <section class="section-container">
                 <div class="style-img">
                     <img src="imgs/bank.png" alt="">
@@ -96,18 +99,17 @@
                 <div class="button">
                     <button id="btnGetDolars" class="style-button" type="button">Calculate</button>
                 </div>
-            </div>
-        </section>
+            </section>
         </main>
     </section>
     <footer class="dp-footer">
-            <div class="footer-child">
-                <h5>Made by Majo, Rodri & Pauli</h1>
-            </div>
-            <div class="footer-child">
-                <a class="github" href="https://github.com/rodrigoenzohernandez/dual-pay" target="_blank"><i class=" fa
+        <div class="footer-child">
+            <h5>Made by Majo, Rodri & Pauli</h1>
+        </div>
+        <div class="footer-child">
+            <a class="github" href="https://github.com/rodrigoenzohernandez/dual-pay" target="_blank"><i class=" fa
                     fa-github"></i> Github</a>
-            </div>
+        </div>
     </footer>
     <script src="../functions/toggle.js"></script>
     <script src="./app.js"></script>
@@ -119,6 +121,8 @@
     <script src="../public/scripts/calculator-dom.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../functions/frontErrorControl.js"></script>
 </body>
 
 </html>
