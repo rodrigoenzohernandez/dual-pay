@@ -71,26 +71,33 @@
             </section>
         </main>
         <main id="main__calculator" style="display: none">
-            <section id="side__calculator">
-                <div class="column-cards">
-                    <div class="box-style">
-                        <h1>NET INCOME <span><i class="fas fa-dollar-sign"></i></span></h1>
-                        <h3>Enter the amount to calculate</h3>
-                        <input id="facebankAmountInput" min="30" type="number">
-                    </div>
-                    <div class="box-style box-style-percentage">
-                        <h1>PERCENTAGE <span> <i class="fas fa-percentage"></i></span></h1>
-                        <h3>Nominals</h3>
-                        <input id="nominalsInput" type="text" disabled>
-                    </div>
-                    <div class="box-style">
-                        <h1>DOLLARS TO RECEIVE <span> <i class="fas fa-hand-holding-usd"></i></span></h1>
-                        <h3>Nominals</h3>
-                        <input id="nominalsInput" type="text" disabled>
-                    </div>
-                    <div class="button">
-                        <button id="btnCalcutate" class="style-button" type="button" disabled>Calculate</button>
-                    </div>
+        <section id="side__calculator">
+            <div class="column-cards">
+                <div class="box-style">
+                    <h1>NET INCOME <span><i class="fas fa-dollar-sign"></i></span></h1>
+                    <h3>Enter the amount to calculate</h3>
+                    <input id="netIncomeInput" min="1" type="number">
+                </div>
+
+                <div class="box-style box-style-percentage">
+                    <h1>PERCENTAGE <span> <i class="fas fa-percentage"></i></span></h1>
+                    
+                    <select id="percentageSelect" name="select" disabled>
+                        <option value="10">10%</option>
+                        <option value="20" >20%</option>
+                        <option value="30">30%</option>
+                        <option value="40">40%</option>
+                        <option value="50">50%</option>
+
+                      </select>
+
+                </div>
+                <div class="box-style">
+                    <h1>DOLLARS TO RECEIVE <span> <i class="fas fa-hand-holding-usd"></i></span></h1>
+                    <input id="dolarsInput" type="text" disabled>
+                </div>
+                <div class="button">
+                    <button id="btnGetDolars" class="style-button" type="button">Calculate</button>
                 </div>
             </section>
         </main>
@@ -111,6 +118,8 @@
     <script src="../functions/calculator.js"></script>
     <script src="../services/GET.js"></script>
     <script src="../../config/config.js"></script>
+    <script src="../public/scripts/calculator-dom.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../functions/frontErrorControl.js"></script>
