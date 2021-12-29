@@ -21,11 +21,16 @@ facebankInput.addEventListener('blur', async () => {
         facebankInput.value = ""
     }
     else {
-        // calculate nominals and show amount 
-        nominalsInput.value = await usdToNominals(facebankAmount)
-        usdOption.disabled = false
-        pesosOption.disabled = false
-        receivedMoneyInput.value = ""
+        // calculate nominals and show amount
+
+        const nominalsValue = await usdToNominals(facebankAmount)
+
+        if(nominalsValue){
+            nominalsInput.value = nominalsValue
+            usdOption.disabled = false
+            pesosOption.disabled = false
+            receivedMoneyInput.value = ""
+        }
     }
 })
 
