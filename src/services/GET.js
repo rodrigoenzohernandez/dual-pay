@@ -11,7 +11,7 @@ async function GET(baseUrl, resource, config) {
   try {
     const instance = axios.create({
       baseURL: baseUrl,
-      timeout: 5000,
+      timeout: 50000,
     });
 
     const response = await instance.get(resource, config);
@@ -22,7 +22,8 @@ async function GET(baseUrl, resource, config) {
     const errorFiled = document.querySelector("#alertWarning");
     const strongWarning = document.querySelector("#strongWarning");
 
-    errorFiled.style = "display: block";
+    errorFiled.style =  "visibility: visible; opacity: 1; transition: opacity 3s, visibility 3s;";
+
 
     strongWarning.innerText = error;
 

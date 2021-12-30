@@ -25,12 +25,15 @@ body {
     border-right: rgb(6, 40, 95) solid 3px;
     text-align: center;
     transition: 2s;
+    transform: translateX(-100%);
 }
 .column-cards {
     display: inline-block;
 }
 .alertWarning {
-    display: none;
+    visibility: hidden;
+    transition: opacity 3s, visibility 3s; 
+    opacity: 0;
     background-color: black;
     color: red;
     justify-content: space-around;
