@@ -11,7 +11,7 @@ async function GET(baseUrl, resource, config) {
   try {
     const instance = axios.create({
       baseURL: baseUrl,
-      timeout: 50000,
+      timeout: 5000,
     });
 
     const response = await instance.get(resource, config);
