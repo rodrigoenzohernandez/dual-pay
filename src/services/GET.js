@@ -22,7 +22,8 @@ async function GET(baseUrl, resource, config) {
     const errorFiled = document.querySelector("#alertWarning");
     const strongWarning = document.querySelector("#strongWarning");
 
-    errorFiled.style = "display: block";
+    errorFiled.style =  "visibility: visible; opacity: 1; transition: opacity 3s, visibility 3s;";
+
 
     strongWarning.innerText = error;
 
