@@ -25,7 +25,6 @@ body {
     border-right: rgb(6, 40, 95) solid 3px;
     text-align: center;
     transition: 2s;
-    transform: translateX(-100%);
 }
 .column-cards {
     display: inline-block;
